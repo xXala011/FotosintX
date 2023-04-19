@@ -1496,7 +1496,7 @@
     (property "Reference" "R1" (at 166.37 80.01 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "R" (at 166.37 82.55 90)
+    (property "Value" "270" (at 166.37 82.55 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "eestn5:RES0.3" (at 166.37 83.312 90)
