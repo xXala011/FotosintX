@@ -1,0 +1,2 @@
+#define ssid ****
+#define passwrod ****
