@@ -71,10 +71,13 @@ void Mqtt::reconnect(){
       }
       if (String(topic) == "actuators/water_pump") {
         Serial.println("water_pump: " + stMessage);
-          statePump = stMessage.toInt();
-
-        }else{
-          client.publish("actuators/water_pump","The state must to be 1 or 0");
+          if(stMessage == "1" || stMessage == "0"){
+            statePump = stMessage.toInt();
+          }
+          else {
+            client.publish("debug/actuators/water_pump","The state must to be 1 or 0");
+          }
         }
+        
       }
     
