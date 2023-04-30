@@ -1,0 +1,5 @@
+.pio
+lib/inputData
+lib/OledAnimation
+include
+.vscode
