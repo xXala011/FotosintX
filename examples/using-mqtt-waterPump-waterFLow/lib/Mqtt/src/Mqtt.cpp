@@ -18,7 +18,7 @@ Mqtt::Mqtt(WiFiClientSecure &espClient):PubSubClient(espClient){
 }
 
 Mqtt::Mqtt(WiFiClient &espClient, char *server, int port):PubSubClient(espClient){
-	setServer(server, port);
+	setServer(mqttServer, port);
   setCallback([this](char* topic, uint8_t* payload, unsigned int length) {
             callbackFunc(topic, payload, length, *this);
         });

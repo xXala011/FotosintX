@@ -12,7 +12,6 @@
 #define WATERFLOW_SIG_PIN 34
 #define WATERPUMP_PIN 2
 
-
 unsigned long lastTime = 0;
 
 // Functions for ISR
@@ -39,9 +38,8 @@ void setup() {
   pinMode(WATERPUMP_PIN, OUTPUT);
   waterFlow = 0;
   attachInterrupt(digitalPinToInterrupt(WATERFLOW_SIG_PIN), pulse, RISING);
-  wifiConnect();
   statePump = client.getStatePump();
-  digitalWrite(WATERPUMP_PIN, *statePump);
+  wifiConnect();
 }
 
 // Prints
@@ -57,13 +55,15 @@ void loop() {
   client.reconnect();
   client.loop();
 
-	if(lastTime == 0 && *statePump == 1){
+  digitalWrite(WATERPUMP_PIN, *statePump);
+
+	if(*statePump == 1 && lastTime == 0){
     lastTime = millis();
 	}
 
+
   // Print loop 
   if(millis() >= lastTime + 60000 && *statePump == 1){
-    lastTime = 0;
     textPulsesPerMinute = "Pulses per minute: " + String(waterFlow);
     textPerSecond = "Pulses per second: " + String(waterFlow/60) + "Hz";
     waterFlow = 0;
@@ -76,5 +76,8 @@ void loop() {
     textStatePump = String("Pump state: " + String(statePump));
     client.publish("sensors/pump_state",textStatePump.c_str()); */
   }
-  digitalWrite(WATERPUMP_PIN, *statePump);
+  
+  if(*statePump == 0){
+    lastTime = 0;
+  }
 }
