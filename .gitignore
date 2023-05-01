@@ -1,0 +1,9 @@
+/tests/bin
+.pioenvs
+.piolibdeps
+.clang_complete
+.gcc-flags.json
+examples/using-mqtt-waterPump-waterFLow/lib/WiFiKeys
+examples/using-mqtt-waterPump-waterFLow/lib/envVar
+examples/using-mqtt-waterPump-waterFLow/lib/WiFiKeys
+examples/using-mqtt-waterPump-waterFLow/lib/utils
