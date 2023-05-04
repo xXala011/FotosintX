@@ -1,9 +1,5 @@
-/tests/bin
+tests/bin
 .pioenvs
 .piolibdeps
 .clang_complete
 .gcc-flags.json
-lib/WiFiKeys
-lib/envVar
-lib/WiFiKeys
-lib/utils

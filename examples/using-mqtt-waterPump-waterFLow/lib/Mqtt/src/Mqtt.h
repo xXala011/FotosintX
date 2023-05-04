@@ -2,7 +2,9 @@
 #include <PubSubClient.h>
 #include <WiFi.h>
 #include <WiFiClientSecure.h>
-#include "envVar.h"
+#include "env.h"
+#include "WiFiKeys.h"
+
 
 enum MqttDefaultCertificates{
   HIVEMQ_CERTIFICATE,
@@ -75,7 +77,12 @@ char clientId[50];
 
 const char* mqttCertificates[2]= {root_ca_hivemq, root_ca_emqx};
 
+
+int rand;
+
 static int statePump;
+
+static double calibrationFactor;
 
 public:
 
@@ -87,9 +94,14 @@ Mqtt(WiFiClientSecure &espClient, char *server, int port, int chosenCertificate)
 
 Mqtt(WiFiClientSecure &espClient, char *server, int port, char *certificate);
 
-int *getStatePump();
+int &getStatePump();
+
+double &getCalibrationFactor();
 
 void reconnect();
 
 static void callbackFunc(char* topic, byte* message, unsigned int length, PubSubClient &client);
+
+
+void wifiConnect();
 };

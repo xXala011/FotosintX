@@ -129,6 +129,7 @@
  C:/Users/feder/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/spi_flash/include/esp_spi_flash.h \
  C:/Users/feder/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/spi_flash/include/esp_spi_flash_counters.h \
  C:/Users/feder/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_hw_support/include/soc/esp32/spiram.h \
+ C:/Users/feder/.platformio/packages/framework-arduinoespressif32/libraries/Ticker/src/Ticker.h \
  C:/Users/feder/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src/Wire.h \
  C:/Users/feder/.platformio/packages/framework-arduinoespressif32/cores/esp32/esp32-hal.h \
  C:/Users/feder/.platformio/packages/framework-arduinoespressif32/libraries/WiFiClientSecure/src/WiFiClientSecure.h \
@@ -231,5 +232,7 @@
  C:/Users/feder/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/mbedtls/mbedtls/include/mbedtls/error.h \
  lib/Mqtt/src/Mqtt.h \
  .pio/libdeps/nodemcu-32s/PubSubClient/src/PubSubClient.h \
- lib/envVar/src/envVar.h lib/utils/src/utils.h \
- lib/WiFiKeys/src/WiFiKeys.h
+ lib/env/src/env.h lib/WiFiKeys/src/WiFiKeys.h \
+ .pio/libdeps/nodemcu-32s/ArduinoJson/src/ArduinoJson.h \
+ .pio/libdeps/nodemcu-32s/ArduinoJson/src/ArduinoJson.hpp \
+ .pio/libdeps/nodemcu-32s/ArduinoJson/src/ArduinoJson/Configuration.hpp
